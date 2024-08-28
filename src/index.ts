@@ -1,6 +1,13 @@
 import { Elysia } from "elysia";
+import { IndexRoute } from "./api/routes";
+import { elysiaPlugin } from "./plugin";
 
-const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
+// Initialize Elysia app
+const app = new Elysia()
+  .use(elysiaPlugin)
+  .use(IndexRoute);
+
+app.listen(Bun.env.PORT || 3000);
 
 console.log(
   `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
