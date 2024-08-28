@@ -12,4 +12,12 @@ To start the development server run:
 bun run dev
 ```
 
-Open http://localhost:3000/ with your browser to see the result.
+// Define a route
+// app.get("/", () => `Hello Elysia ${Bun.env.VERSION}`);
+// app.get("/hello/:name", (ctx) => `Hello ${ctx.params}`);
+// app.get("/logger", (ctx: Context) => {
+//   logger.Info("Hello World Logger");
+//   return "Hello World Logger";
+// });
+// app.post("/post", ({ body }) => body)
+// Start the server# elysia-prisma-template
